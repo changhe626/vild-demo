@@ -10,6 +10,21 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+/**
+ *
+ @ NotNull
+不能为null，但是可以为空字符串""
+
+ @ NotEmpty
+ 不能为null，不能为空字符串""，其本质是CharSequence, Collection, Map, or Array的size或者length不能为0
+
+ @ NotBlank
+ a constrained String is valid as long as it’s not null and the trimmed length is greater than zero
+
+ @ NonNull
+ @ NotNull 是 JSR303（Bean的校验框架）的注解，用于运行时检查一个属性是否为空，如果为空则不合法。
+ @ NonNull 是JSR 305（缺陷检查框架）的注解，是告诉编译器这个域不可能为空，当代码检查有空值时会给出一个风险警告，目前这个注解只有IDEA支持。
+ */
 
 @Data
 public class User {

@@ -10,7 +10,11 @@ import javax.validation.ValidatorFactory;
 
 /**
  * 默认会校验完所有属性，然后将错误信息一起返回，但很多时候不需要这样，
- * 一个校验失败了，其它就不必校验了, 为此，需要这样设置
+ * 一个校验失败了，其它就不必校验了, 为此，需要这样设置.
+ *
+ * 有用的, 注释了之后会校验全部, 但是只返回一个.
+ * 不注释就是只校验一个.
+ *
  */
 @Configuration
 public class ValidatorConfig {

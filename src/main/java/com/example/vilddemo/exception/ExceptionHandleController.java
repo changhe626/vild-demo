@@ -17,11 +17,13 @@ public class ExceptionHandleController {
 
 
 
-
-
     /**
      * 处理参数缺失异常
      * 抛出的是 MethodArgumentNotValidException 这个异常
+     *
+     * 有时候是 ConstraintViolationException这个异常, 一样的捕获.
+     * ValidationException  是jsr的校验异常的父类,捕获这个
+     *
      * @param ex
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)

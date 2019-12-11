@@ -46,5 +46,33 @@ public class UserController {
         return "success";
     }
 
+    /**
+     *
+     单个参数校验
+
+     @ RestController
+     @ Validated
+     public class PingController {
+
+     @ GetMapping("/getUser")
+     public String getUserStr(@ NotNull(message = "name 不能为空") String name,
+                              @ Max(value = 99, message = "不能大于99岁") Integer age) {
+
+            return "name: " + name + " ,age:" + age;
+     }
+     }
+     当处理GET请求时或只传入少量参数的时候，我们可能不会建一个bean来接收这些参数，就可以像上面这样直接在controller方法的参数中进行校验。
+     注意：这里一定要在方法所在的controller类上加入@Validated注解，不然没有任何效果。
+     *
+     */
+
+
+    /**
+     * 参数校验分组
+     * 级联参数校验
+     *
+     * https://www.cnblogs.com/mooba/p/11276062.html
+     */
+
 
 }
